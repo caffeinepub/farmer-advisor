@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Ag-Tech Green Palette */
+    --background: 0.965 0.004 264;
+    --foreground: 0.19 0.015 264;
+    --card: 1 0 0;
+    --card-foreground: 0.19 0.015 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.19 0.015 264;
+    --primary: 0.493 0.148 145;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.885 0.07 145;
+    --secondary-foreground: 0.3 0.1 145;
+    --muted: 0.945 0.005 264;
+    --muted-foreground: 0.545 0.018 264;
+    --accent: 0.885 0.07 145;
+    --accent-foreground: 0.3 0.1 145;
+    --destructive: 0.577 0.195 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.918 0.006 264;
+    --input: 0.918 0.006 264;
+    --ring: 0.493 0.148 145;
+    --chart-1: 0.493 0.148 145;
+    --chart-2: 0.535 0.148 145;
+    --chart-3: 0.7 0.13 145;
+    --chart-4: 0.7 0.18 41;
+    --chart-5: 0.577 0.195 27;
+    --sidebar: 0.285 0.012 220;
+    --sidebar-foreground: 0.92 0 0;
+    --sidebar-primary: 0.493 0.148 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.32 0.015 220;
+    --sidebar-accent-foreground: 0.92 0 0;
+    --sidebar-border: 0.35 0.015 220;
+    --sidebar-ring: 0.493 0.148 145;
+
+    /* Brand tokens */
+    --brand-green: 0.493 0.148 145;
+    --brand-green-light: 0.535 0.148 145;
+    --brand-green-tint: 0.885 0.07 145;
+    --brand-green-pale: 0.955 0.03 145;
+    --brand-alert: 0.577 0.195 27;
+    --brand-warning: 0.7 0.18 41;
+    --brand-footer: 0.285 0.012 220;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .chat-bubble-assistant {
+    background-color: oklch(var(--brand-green-pale));
+    border-color: oklch(var(--brand-green-tint));
+  }
+
+  .chat-bubble-user {
+    background-color: oklch(var(--card));
+    border-color: oklch(var(--border));
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      oklch(0.19 0.015 264 / 0.72) 0%,
+      oklch(0.493 0.148 145 / 0.45) 100%
+    );
+  }
+
+  .soil-bar-low {
+    background: linear-gradient(
+      to right,
+      oklch(0.577 0.195 27),
+      oklch(0.7 0.18 41)
+    );
+  }
+
+  .soil-bar-good {
+    background: linear-gradient(
+      to right,
+      oklch(0.535 0.148 145),
+      oklch(0.7 0.13 145)
+    );
+  }
+}
